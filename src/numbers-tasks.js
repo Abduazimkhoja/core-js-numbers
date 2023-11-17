@@ -40,8 +40,8 @@ function getCircleCircumference(r) {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
-function getAverage() {
-  throw new Error('Not implemented');
+function getAverage(a, b) {
+  return a + b === Infinity ? a : (a + b) / 2;
 }
 
 /**
