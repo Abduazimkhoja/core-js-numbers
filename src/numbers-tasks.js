@@ -24,8 +24,8 @@ function getRectangleArea(w, h) {
  *   3.14 => 19.729201864543903
  *   0    => 0
  */
-function getCircleCircumference() {
-
+function getCircleCircumference(r) {
+  return r * Math.PI * 2;
 }
 
 /**
@@ -40,7 +40,7 @@ function getCircleCircumference() {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
-function getAverage(/* value1, value2 */) {
+function getAverage() {
   throw new Error('Not implemented');
 }
 
