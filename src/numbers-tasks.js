@@ -132,7 +132,7 @@ function getLastDigit(n) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(n) {
-  return `${n}`;
+  return +n;
 }
 
 /**
@@ -191,7 +191,13 @@ function roundToPowerOfTen(/* a, b */) {
  *   17 => true
  */
 function isPrime(n) {
-  return n % 2 !== 0;
+  return (
+    n === 2 ||
+    n === 3 ||
+    n === 5 ||
+    n === 7 ||
+    (n % 2 !== 0 && n % 3 !== 0 && n % 5 !== 0 && n % 7 !== 0)
+  );
 }
 
 /**
