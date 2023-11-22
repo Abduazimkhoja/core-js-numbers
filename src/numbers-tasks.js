@@ -169,8 +169,10 @@ function getParallelepipedDiagonal(/* a, b, c */) {
  *   1678, 2  => 1700
  *   1678, 3  => 2000
  */
-function roundToPowerOfTen(/* a, b */) {
+function roundToPowerOfTen() {
   throw new Error('Not implemented');
+
+  //   return n;
 }
 
 /**
@@ -199,6 +201,10 @@ function isPrime(n) {
     (n % 2 !== 0 && n % 3 !== 0 && n % 5 !== 0 && n % 7 !== 0)
   );
 }
+// const isPrime = (n) =>
+//   n > 1 &&
+//   ([2, 3, 5, 7].includes(n) ||
+//     ![2, 3, 5, 7].some((factor) => n % factor === 0));
 
 /**
  * Tries to convert value to number and returns it if conversion was successful;
@@ -230,8 +236,8 @@ function toNumber(/* value, def */) {
  *   -2 => -8
  *   0  => 0
  */
-function getCube(/* num */) {
-  throw new Error('Not implemented');
+function getCube(n) {
+  return n ** 3;
 }
 
 /**
@@ -262,8 +268,8 @@ function getFibonacciNumber(/* index */) {
  *   10 => 55 // (1+2+3+...+10)
  *   1  => 1
  */
-function getSumToN(/* n */) {
-  throw new Error('Not implemented');
+function getSumToN(n) {
+  return (n + 1) * (n / 2);
 }
 
 /**
