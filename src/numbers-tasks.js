@@ -283,9 +283,8 @@ const getSumToN = (n) => {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-const getSumOfDigits = (/* num */) => {
-  throw new Error('Not implemented');
-};
+const getSumOfDigits = (num) =>
+  `${num}`.split('').reduce((sum, val) => sum + +val, 0);
 
 /**
  * Returns true if the given number is a power of two, false otherwise.
