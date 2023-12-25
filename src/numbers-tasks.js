@@ -253,9 +253,8 @@ const getCube = (n) => {
  *   3  => 2
  *   10 => 55
  */
-const getFibonacciNumber = (/* index */) => {
-  throw new Error('Not implemented');
-};
+const getFibonacciNumber = (n) =>
+  n <= 1 ? n : getFibonacciNumber(n - 1) + getFibonacciNumber(n - 2);
 
 /**
  * Returns the sum of all numbers from 1 to n.
