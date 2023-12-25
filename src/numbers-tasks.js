@@ -221,10 +221,7 @@ const isPrime = (n) => {
  *   toNumber(42, 0) => 42
  *   toNumber(new Number(42), 0) => 42
  */
-const toNumber = (/* value, def */) => {
-  throw new Error('Not implemented');
-};
-
+const toNumber = (value, def) => (Number.isNaN(+value) ? def : Number(value));
 /**
  * Returns the cube of the given number.
  *
