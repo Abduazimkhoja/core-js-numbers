@@ -298,9 +298,7 @@ const getSumOfDigits = (/* num */) => {
  *   16  => true
  *   15  => false
  */
-const isPowerOfTwo = (/* num */) => {
-  throw new Error('Not implemented');
-};
+const isPowerOfTwo = (num) => Math.log2(num) % 1 === 0;
 
 /**
  * Returns the sine of a number.
