@@ -373,9 +373,7 @@ function toFixed(/* number, fractionDigits */) {
  * 12.345, 4   => '12.35'
  */
 const toPrecision = (number, precision) =>
-  `${number}`.length > precision
-    ? number.toFixed(precision)
-    : `${number}`.slice(0, precision);
+  Number(number).toPrecision(precision);
 
 /**
  * Returns the primitive value of a Number object.
