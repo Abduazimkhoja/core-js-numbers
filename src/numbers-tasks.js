@@ -405,9 +405,8 @@ function getNumberValue(/* number */) {
  * 5        => true
  * '5'      => false
  */
-function isNumber(/* number */) {
-  throw new Error('Not implemented');
-}
+const isNumber = (n) =>
+  n !== Infinity && typeof n === 'number' && !Number.isNaN(n);
 
 /**
  * Returns a boolean value indicating whether a number is an integer or not.
