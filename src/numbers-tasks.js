@@ -573,8 +573,10 @@ function getMaxNumber(f, s) {
  * -5, 0 => -5 | -4 | -3 | -2 | -1 | 0
  * -1, 1 => -1 | 0 | 1
  */
-function getRandomInteger(/* min, max */) {
-  throw new Error('Not implemented');
+function getRandomInteger(min, max) {
+  const minRound = Math.floor(min);
+  const maxRound = Math.floor(max);
+  return Math.floor(Math.random() * (maxRound - minRound + 1)) + minRound;
 }
 
 /**
