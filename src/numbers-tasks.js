@@ -75,9 +75,7 @@ const getDistanceBetweenPoints = (/* x1, y1, x2, y2 */) => {
  *   x + 8 = 0       => -8
  *   5*x = 0         => 0
  */
-const getLinearEquationRoot = (/* a, b */) => {
-  throw new Error('Not implemented');
-};
+const getLinearEquationRoot = (a, b) => (a !== 0 ? -b / a : b);
 
 /**
  * Returns an angle (in radians) between two vectors given by xi and yi,
