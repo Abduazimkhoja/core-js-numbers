@@ -312,9 +312,7 @@ const isPowerOfTwo = (/* num */) => {
  *   0 => 0
  *   Math.PI / 2 => 1
  */
-const getSine = (/* num */) => {
-  throw new Error('Not implemented');
-};
+const getSine = (num) => Math.sin(+num);
 
 /**
  * Returns a string representation of a number in a specified base (radix).
