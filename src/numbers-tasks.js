@@ -169,10 +169,9 @@ const getParallelepipedDiagonal = (/* a, b, c */) => {
  *   1678, 2  => 1700
  *   1678, 3  => 2000
  */
-const roundToPowerOfTen = () => {
-  throw new Error('Not implemented');
-
-  //   return n;
+const roundToPowerOfTen = (num, pow) => {
+  const divisor = 10 ** pow;
+  return Math.round(num / divisor) * divisor;
 };
 
 /**
