@@ -558,7 +558,7 @@ function getSumOfNumbers(/* x1, x2, x3 */) {
  * 0, 5   => 5
  */
 function getMaxNumber(f, s) {
-  return f > s ? f : s;
+  return Math.max(s, f);
 }
 
 /**
