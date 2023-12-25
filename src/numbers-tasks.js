@@ -451,10 +451,8 @@ const getFloatOnString = (str) =>
  * '1.234', 2           => 1
  * '10', 8              => 8
  */
-const getIntegerOnString(/* str, base */) {
-  throw new Error('Not implemented');
-}
-
+const getIntegerOnString = (str, base) =>
+  Number.isNaN(parseInt(str, base)) ? NaN : parseInt(str, base);
 /**
  * Returns whether a number is a safe integer.
  *
