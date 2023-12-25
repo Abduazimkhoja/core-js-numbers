@@ -59,8 +59,8 @@ const getAverage = (a, b) => {
  *   (0,0) (1,0)    => 1
  *   (-5,0) (10,-10) => 18.027756377319946
  */
-const getDistanceBetweenPoints = (/* x1, y1, x2, y2 */) => {
-  throw new Error('Not implemented');
+const getDistanceBetweenPoints = (x1, y1, x2, y2) => {
+  return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
 };
 
 /**
@@ -146,8 +146,8 @@ const parseNumberFromString = (n) => {
  *   3,3,3   => 5.196152422706632
  *   1,2,3   => 3.741657386773941
  */
-const getParallelepipedDiagonal = (/* a, b, c */) => {
-  throw new Error('Not implemented');
+const getParallelepipedDiagonal = (a, b, c) => {
+  return Math.sqrt(a * a + b * b + c * c);
 };
 
 /**
@@ -302,7 +302,9 @@ const isPowerOfTwo = (num) => Math.log2(num) % 1 === 0;
  *   0 => 0
  *   Math.PI / 2 => 1
  */
-const getSine = (num) => Math.sin(+num);
+const getSine = (num) => {
+  return Math.sin(+num);
+};
 
 /**
  * Returns a string representation of a number in a specified base (radix).
@@ -315,7 +317,9 @@ const getSine = (num) => Math.sin(+num);
  * 255, 16 => 'ff'
  * 2, 2    => '10'
  */
-const numberToStringInBase = (number, base) => number.toString(base);
+const numberToStringInBase = (number, base) => {
+  return number.toString(base);
+};
 
 /**
  * Returns a string representation of a number in exponential notation.
@@ -327,8 +331,9 @@ const numberToStringInBase = (number, base) => number.toString(base);
  * @example:
  * 12345, 2    => '1.23e+4'
  */
-const toExponential = (number, fractionDigits) =>
-  Number(number).toExponential(fractionDigits);
+const toExponential = (number, fractionDigits) => {
+  return Number(number).toExponential(fractionDigits);
+};
 
 /**
  * Returns a string representation of a number in fixed-point notation.
@@ -341,8 +346,9 @@ const toExponential = (number, fractionDigits) =>
  * 12345, 2    => '12345.00'
  * 12.345, 1   => '12.3'
  */
-const toFixed = (number, fractionDigits) =>
-  Number(number).toFixed(fractionDigits);
+const toFixed = (number, fractionDigits) => {
+  return Number(number).toFixed(fractionDigits);
+};
 
 /**
  * Returns a string representation of a number in normal (fixed-point or exponential)
@@ -356,8 +362,9 @@ const toFixed = (number, fractionDigits) =>
  * 12345, 7    => '12345.00'
  * 12.345, 4   => '12.35'
  */
-const toPrecision = (number, precision) =>
-  Number(number).toPrecision(precision);
+const toPrecision = (number, precision) => {
+  return Number(number).toPrecision(precision);
+};
 
 /**
  * Returns the primitive value of a Number object.
@@ -388,8 +395,9 @@ const getNumberValue = (n) => {
  * 5        => true
  * '5'      => false
  */
-const isNumber = (n) =>
-  n !== Infinity && typeof n === 'number' && !Number.isNaN(n);
+const isNumber = (n) => {
+  return Number.isFinite(n);
+};
 
 /**
  * Returns a boolean value indicating whether a number is an integer or not.
@@ -402,7 +410,9 @@ const isNumber = (n) =>
  * 5.1  => false
  * '5'  => false
  */
-const isInteger = (n) => Number.isInteger(n);
+function isInteger(number) {
+  return Number.isInteger(number);
+}
 
 /**
  * Returns a floating point number or, if the number cannot be parsed from the argument, returns NaN.
@@ -414,8 +424,9 @@ const isInteger = (n) => Number.isInteger(n);
  * '4.567abcdefgh' => 4.567
  * 'abcdefgh'      => NaN
  */
-const getFloatOnString = (str) =>
-  Number.isNaN(parseFloat(str)) ? NaN : parseFloat(str);
+const getFloatOnString = (str) => {
+  return Number.parseFloat(str);
+};
 
 /**
  * Returns an integer of the specified base or, if the number cannot be parsed
@@ -431,8 +442,9 @@ const getFloatOnString = (str) =>
  * '1.234', 2           => 1
  * '10', 8              => 8
  */
-const getIntegerOnString = (str, base) =>
-  Number.isNaN(parseInt(str, base)) ? NaN : parseInt(str, base);
+const getIntegerOnString = (str, base) => {
+  return Number.parseInt(str, base);
+};
 /**
  * Returns whether a number is a safe integer.
  *
