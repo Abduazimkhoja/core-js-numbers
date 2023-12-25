@@ -434,9 +434,8 @@ function isInteger(/* number */) {
  * '4.567abcdefgh' => 4.567
  * 'abcdefgh'      => NaN
  */
-function getFloatOnString(/* str */) {
-  throw new Error('Not implemented');
-}
+const getFloatOnString = (str) =>
+  Number.isNaN(parseFloat(str)) ? NaN : parseFloat(str);
 
 /**
  * Returns an integer of the specified base or, if the number cannot be parsed
@@ -452,7 +451,7 @@ function getFloatOnString(/* str */) {
  * '1.234', 2           => 1
  * '10', 8              => 8
  */
-function getIntegerOnString(/* str, base */) {
+const getIntegerOnString(/* str, base */) {
   throw new Error('Not implemented');
 }
 
